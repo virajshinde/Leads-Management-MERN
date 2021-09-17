@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema({
   type: String,
-  image: string
+  image: String
 });
 
-mongoose.model('users', userSchema);
+module.exports = mongoose.model('users', userSchema);
