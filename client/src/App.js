@@ -13,18 +13,18 @@ const App = () => {
      params: {query: 'cars'},    
      })
 
-     setMessage(response)
-     console.log(response)
+     setMessage(response.data.results)
+     console.log(message)
 
     // this.setState({images: response.data.results})
 }
-  
+
   return(
     <div>
       <Carousel/>
       <Files/>
       <Pagination onClick={onSearchSubmit()}/>
-      {setMessage}
+       
     </div>
   )
 }
