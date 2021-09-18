@@ -1,12 +1,18 @@
 import React, {Component} from 'react'
 
 
-class Files extends Component{
-    render(){
-        return(
-            <div>Files</div>
-        )
-    }
+const  Files = (props) => {
+
+    const images = props.images.map((image) =>{
+        return image.urls.full
+        
+    })
+
+    
+    return (
+    <div className="image-list">
+        {images}
+    </div>)
 }
 
 export default Files

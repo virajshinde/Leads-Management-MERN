@@ -22,9 +22,9 @@ const App = () => {
   return(
     <div>
       <Carousel/>
-      <Files/>
+      <Files images={message}/>
       <Pagination onClick={onSearchSubmit()}/>
-       
+      
     </div>
   )
 }
