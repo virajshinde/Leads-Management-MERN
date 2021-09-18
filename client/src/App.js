@@ -10,7 +10,7 @@ const App = () => {
   const [message, setMessage] = useState( [] );
    const onSearchSubmit = async (term) => {
     const response = await unsplash.get('/search/photos',{
-     params: {query: 'cars'},    
+     params: {query: term},    
      })
 
      setMessage(response.data.results)
@@ -23,7 +23,7 @@ const App = () => {
     <div>
       <Carousel/>
       <Files images={message}/>
-      <Pagination onClick={onSearchSubmit()}/>
+      <Pagination pages={onSearchSubmit}/>
       
     </div>
   )
