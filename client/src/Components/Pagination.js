@@ -7,18 +7,18 @@ class Pagination extends Component{
     render(props){
         return(
             <div>
-                <div onClick = {this.props.pages('Cars')}>
+                <button onClick = {this.props.pages('Cars')}>
                     Cars
-                </div>
-                <div  onClick = {this.props.pages('Flowers')}>
+                </button>
+                <button  onClick = {this.props.pages('Flowers')}>
                     Flowers
-                </div>
-                <div  onClick = {this.props.pages('Paintings')}>
+                </button>
+                <button  onClick = {this.props.pages('Paintings')}>
                     Paintings
-                </div>
-                <div  onClick = {this.props.pages('Guitars')}>
+                </button>
+                <button  onClick = {this.props.pages('Guitars')}>
                     Guitars
-                </div>
+                </button>
 
                 
             </div>
