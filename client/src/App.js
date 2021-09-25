@@ -1,4 +1,4 @@
-import Carousel from './Components/Carousel'
+import CarouselComponent from './Components/CarouselComponent.js'
 import Pagination from './Components/Pagination'
 import Files from './Components/Files'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -8,18 +8,26 @@ import React , {useState,useEffect} from 'react'
 const App = () => {
 
   const [message, setMessage] = useState( [] );
+  
+  
+  
   const onSearchSubmit = async (term) => {
     const response = await unsplash.get('/search/photos',{
      params: {query: term},    
      })
 
      setMessage(response.data.results)
+    
      console.log(message)
 
     
 
     // this.setState({images: response.data.results})
 }
+
+// })
+
+
   
 
 
@@ -28,10 +36,13 @@ const App = () => {
   }, [message]);
   
 
+ 
+
   return(
     <div>
-      <Carousel/>
+      
       <Files images={message}/>
+      {/* <Carousel images={message}/> */}
       {/* <Pagination pages={onSearchSubmit}/> */}
       <button onClick = {() => onSearchSubmit('Cars')}>
                     Cars
@@ -45,6 +56,11 @@ const App = () => {
                 <button  onClick = {() => onSearchSubmit('furniture')}>
                   Furniture
                 </button>
+
+                <CarouselComponent images={message}/>
+
+                
+                
       
     </div>
   )
