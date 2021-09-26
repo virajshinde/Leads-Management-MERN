@@ -14,6 +14,8 @@ const  CarouselComponent= (props) => {
           className="d-block w-100"
           src={image.urls.full}
           alt="First slide"
+          
+          
         />
         <Carousel.Caption>
           <h3>First slide label</h3>
@@ -23,7 +25,7 @@ const  CarouselComponent= (props) => {
         
     })
     return(
-        <div>
+        <div width="60%" height="400px">
           <Carousel>
             {items}
           </Carousel>
